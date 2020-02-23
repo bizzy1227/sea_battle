@@ -1,0 +1,30 @@
+<h2>Game history</h2>
+
+{{#if lists.length}}
+<ul>
+   {{#each lists}}
+      <li class="list">
+         <label for="">
+            <span>{{title}}</span>
+         </label>
+      </li>
+   {{/each}}
+</ul>
+{{else}}
+<p>Push new game!</p>
+{{/if}}
+
+<form action="/" method="POST" class="formInput">
+   <h2>Shot inputs</h2>
+
+   <div class="input-field ">
+      <input type="text" class="inputX" name="titleX" placeholder="X">
+      <input type="text" class="inputY" name="titleY" placeholder="Y">
+   </div>
+
+   <button type="submit" class="btn shotBtn">Shot</button>
+</form>
+
+<form action="/delete" method="GET">
+   <button type="submit" class="btn">New game</button>
+</form>
