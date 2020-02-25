@@ -25,7 +25,7 @@ app.use(serverRoutes);
 // ---------------------------------------------------------------
 async function startWork () {
    try {
-      await mongoose.connect('mongodb+srv://tester12:tester27@seabattleapp-qmru3.mongodb.net/test?retryWrites=true&w=majority', {
+      await mongoose.connect('mongodb://localhost:27017/test', {
          useNewUrlParser: true,
          useFindAndModify: false
       });
